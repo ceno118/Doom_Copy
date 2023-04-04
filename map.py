@@ -29,5 +29,5 @@ class Map:
                     self.world_map[(i,j)] = value
 
     def draw(self):
-        [pg.draw.rect(self.game.screen, GRAY, (pos[0] * 50, pos[1] * 50, 50, 50), 2)
+        [pg.draw.rect(self.game.screen, GRAY, (pos[0] * 100, pos[1] * 100, 100, 100), 2)
         for pos in self.world_map]
