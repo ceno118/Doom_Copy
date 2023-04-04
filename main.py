@@ -7,8 +7,6 @@ from player import *
 class Game:
     def __init__(self):
         pg.init()
-        pg.mouse.set_visible(False)
-        pg.event.set_grab(True)
         self.screen = pg.display.set_mode(RES)
         self.clock = pg.time.Clock()
         self.delta_time = 1
@@ -34,6 +32,12 @@ class Game:
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
                 pg.quit()
                 sys.exit()
+            if event.type == pg.KEYDOWN and event.key == pg.K_m:
+                pg.mouse.set_visible(False)
+                pg.event.set_grab(True)
+            if event.type == pg.KEYDOWN and event.key == pg.K_n:
+                pg.mouse.set_visible(True)
+                pg.event.set_grab(False)
 
     def run(self):
         while True:
