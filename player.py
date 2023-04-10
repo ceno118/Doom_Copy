@@ -58,9 +58,9 @@ class Player():
         self.movement()
 
     def draw(self):
-        pg.draw.line(self.game.screen, YELLOW, (self.x * 100, self.y * 100),
-                     (self.x * 100 + WIDTH * math.cos(self.angle),
-                      self.y * 100 + WIDTH * math.sin(self.angle)), 2)
+        # pg.draw.line(self.game.screen, YELLOW, (self.x * 100, self.y * 100),
+        #              (self.x * 100 + WIDTH * math.cos(self.angle),
+        #               self.y * 100 + WIDTH * math.sin(self.angle)), 2)
         pg.draw.circle(self.game.screen, GREEN, (int(self.x * 100), int(self.y * 100)), 15)
 
     @property
